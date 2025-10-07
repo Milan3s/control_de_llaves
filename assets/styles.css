@@ -1,0 +1,83 @@
+/* Fuente global */
+body {
+  font-family: Consolas, monospace;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Tarjetas */
+.card-feature {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background: #fff;
+  height: 100%;
+}
+.card-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.12);
+}
+.card-feature .card-body {
+  padding: 2rem 1.5rem;
+}
+
+/* Botón con gradiente opcional */
+.btn-gradient {
+  background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+.btn-gradient:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #0dcaf0, #0d6efd);
+  color: #fff;
+}
+
+/* Contenedores principales */
+.centrar-contenedor-dashboard {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.centrar-contenedor {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Botón nuevo + alertas === */
+.botones-alertas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* se adapta al contenedor */
+  margin-bottom: 15px;
+}
+
+.botones-alertas .btn {
+  white-space: nowrap; /* evita que el texto del botón se corte */
+}
+
+.botones-alertas .alert {
+  flex-grow: 1;       /* las alertas ocupan todo el espacio disponible */
+  margin-left: 15px;  /* separación respecto al botón */
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .botones-alertas {
+    flex-direction: column; /* apila el botón y las alertas */
+    align-items: stretch;   /* que ocupen todo el ancho */
+  }
+
+  .botones-alertas .alert {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
